@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  react-todo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "npm start"
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - "3000:3000"
+    stdin-open: true
